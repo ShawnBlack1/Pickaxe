@@ -1,0 +1,7 @@
+from 
+  invoice a 
+  join invoice_detail b on a.invoice_id = b.invoice_id 
+  join product i on b.product_id = i.product_id 
+where 
+  c.store_code in ('70002157','70002158','70002159')
+  and a.invoice_date BETWEEN '2022-01-01' and '2022-01-31'
